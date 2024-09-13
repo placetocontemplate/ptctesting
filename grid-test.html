@@ -1,0 +1,252 @@
+<html>
+<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+<style>
+    
+    :root {
+    --bg: #8a9d92;
+    }
+    
+    body {
+        margin: 0;
+        color: #fff;
+        font-size: 20px;
+        font-family: "SUSE", sans-serif;
+    }
+    
+    img {
+        width: 100%;
+        margin: auto;
+        display: inline-block;
+    }
+
+#container {
+	margin: 350px 0 0 0;
+    display: grid;
+    grid-template-columns: 20% 30% 480px;
+    justify-content: space-between;
+    background-color: var(--bg);
+    padding: 0px 0px 0px;
+    align-items: start;
+    gap: 30px;
+    grid-template-areas: "leftcol maincol rightcol";
+    /* border-radius: 65px 0 65px 0px; */
+    overflow: hidden;
+}
+    
+    #circ {
+        border-radius: 50%;
+        width: 60%;
+        padding: 60% 0 0 0;
+        background: #fff;
+        margin: 40px auto 20px;
+    }
+    
+#item-a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    /* background: red; */
+    grid-area: leftcol;
+    text-align: center;
+    border-radius: 0 0 45px 0px;
+}
+    
+    .dk-gr {
+            background: #91aa9b;
+    }
+
+#item-b {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    line-height: 35px;
+    grid-area: maincol;
+}
+    
+#item-c {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    /* background: blue; */
+    grid-area: rightcol;
+    text-align: center;
+	padding: 40px 60px 0 0;
+}
+    
+#item-c img {
+    width:100%;
+}
+    
+    
+    
+#lft-container {
+    display: grid;
+    grid-template-columns: 50% 400px;
+    justify-content: space-around;
+    align-items: top;
+    justify-items: center;
+    /* background: #fff; */
+    color: #000;
+    padding: 45px 20px 80px;
+    gap: 0px;
+    grid-template-areas: "leftcol maincol";
+}   
+    
+#lft-item-a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    /* background: red; */
+    grid-area: leftcol;
+    text-align: center;
+}
+
+#lft-item-b {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    line-height: 28px;
+    grid-area: maincol;
+}
+
+
+
+#rt-container {
+    display: grid;
+    grid-template-columns: 400px 50%;
+    justify-content: space-evenly;
+    align-items: top;
+    justify-items: center;
+    color: #000;
+    padding: 45px 20px 80px;
+    gap: 0px;
+    grid-template-areas: "leftcol maincol";
+}
+
+#rt-item-a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    /* background: red; */
+    grid-area: leftcol;
+}
+
+#rt-item-b {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    line-height: 28px;
+    grid-area: maincol;
+    text-align: center;
+	padding: 20px 0 0 0;
+}
+   
+    
+    
+    
+    
+@media only screen and (max-width:1100px) {
+
+    .dk-gr {
+            background: none !important;
+    }
+	
+	#circ {
+        margin: 20px auto 20px;
+    }
+        
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 20% 40% 20%; */
+    justify-content: space-evenly;
+    padding: 0px 30px 0px;
+    align-items: baseline;
+    gap: 20px;
+    grid-template-areas: "rightcol"
+        "maincol"
+        "leftcol";
+}
+
+    
+#item-c img {
+    width:300px;
+    display: inline-block;
+}
+
+#item-c {
+	padding: 0px 0px 0 0;
+}
+
+
+#circ-hld {
+	width: 50%;
+	margin: auto;
+}
+    
+#lft-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 20% 40% 20%; */
+    justify-content: space-evenly;
+    padding: 35px 30px 80px;
+    align-items: baseline;
+    row-gap: 20px;
+    grid-template-areas: "maincol"
+        "leftcol";
+}   
+
+#rt-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 45px 20px 80px;
+    row-gap: 20px;
+    grid-template-areas: "leftcol" 
+	"maincol";
+} 
+    
+    
+}
+    
+    
+#footer {
+	background-color: var(--bg);
+	min-height: 300px;
+}
+
+</style>
+
+<body>
+
+<div id="container">
+
+    <div id="item-a" class="dk-gr">
+    
+	<div id="circ-hld">	
+    <div id="circ"></div>  
+    Let's go!
+	</div>
+	
+	<br/><br/><br/></div>
+    
+    <div id="item-b"><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies sem tortor, sed maximus nulla elementum eget. Vestibulum et massa turpis. Donec non blandit eros. Nullam consectetur lacus aliquet enim congue, vitae vulputate sapien tempus. Nunc volutpat diam vitae mi vulputate egestas. Morbi scelerisque malesuada dui vitae commodo.</div>
+    
+    <div id="item-c"><img src="mush.png" width="220"></div>
+
+</div>
+    
+<div id="lft-container">
+
+    <div id="lft-item-a"><h1 style="font-size:50px">Left</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies sem tortor, sed maximus nulla elementum eget. Vestibulum et massa turpis. Donec non blandit eros. Nullam consectetur lacus aliquet enim congue, vitae vulputate sapien tempus. Nunc volutpat diam vitae mi vulputate egestas. Morbi scelerisque malesuada dui vitae commodo.<br/><br/>Quisque blandit sollicitudin ultricies. Donec mattis massa sit amet massa interdum, ut tincidunt diam ullamcorper. Fusce lacus neque, ornare in sem eu, ornare fringilla lacus. Vivamus ultricies leo dui, et feugiat nisl auctor a. Donec hendrerit maximus ipsum, nec feugiat lectus. Morbi rhoncus lacus vel finibus luctus. Nunc vulputate nibh non ante mattis, eu interdum orci mattis.</div>
+    
+    <div id="lft-item-b"><img src="mush.png" style="width:100%"></div>
+    
+</div>
+    
+<div id="rt-container" style="background:#f1f5f7">
+
+    <div id="rt-item-a"><img src="mush.png" style="width:100%"></div>
+    
+    <div id="rt-item-b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies sem tortor, sed maximus nulla elementum eget. Vestibulum et massa turpis. Donec non blandit eros. Nullam consectetur lacus aliquet enim congue, vitae vulputate sapien tempus. Nunc volutpat diam vitae mi vulputate egestas. Morbi scelerisque malesuada dui vitae commodo.<br/><br/>Quisque blandit sollicitudin ultricies. Donec mattis massa sit amet massa interdum, ut tincidunt diam ullamcorper. Fusce lacus neque, ornare in sem eu, ornare fringilla lacus. Vivamus ultricies leo dui, et feugiat nisl auctor a. Donec hendrerit maximus ipsum, nec feugiat lectus. Morbi rhoncus lacus vel finibus luctus. Nunc vulputate nibh non ante mattis, eu interdum orci mattis</div>
+    
+</div>
+
+<div id="footer"></div>    
+    
+</body>
+</html>
