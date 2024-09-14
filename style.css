@@ -200,7 +200,8 @@ h4 {
 	justify-items: stretch;
 	max-width: 900px;
 	margin: auto;
-	gap: 15px;
+	gap: 10px;
+	padding: 0 15px;
 }
 
 .img-gal-x {
