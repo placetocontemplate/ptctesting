@@ -36,14 +36,43 @@
 
 <div id="photo-bottom">
 
-	<div id="photos">
-	<div class="photoli"><div id="photo"></div></div>
-	<div class="photoli"><div id="photo"></div></div>
-	<div class="photoli"><div id="photo"></div></div>
-	</div>
+<h4>GALLERY</h4>
+
+<div class="my-images"></div>
 
 </div>
 
 
 </body>
+
+<script>
+
+var images = ["graphics/gallery/img-gal4.png", "graphics/gallery/img-gal6.png", "graphics/gallery/img-gal5.png"];
+
+            
+for (var x = 0; x < images.length; x++) {
+
+	var less = x + 1;
+	
+	var popVar = 'img-pop' + less;
+    
+	var thePop = '<div class="img-pop-hold" id="' + popVar + '" onclick="myFunctionPop(' + less + ')"><div class="img-gal-x">x</div><div class="img-wrap"><img src="' + images[x] + '"></div><div class="img-wrap-bg"></div></div>';
+	
+    var theCirc = '<div class="photoli"><div class="img-gal-circ" style="background:url(' + images[x] + ')" onclick="myFunctionPop(' + less + ')"></div></div>' + thePop;
+	
+	document.querySelector('.my-images').innerHTML += theCirc;
+	
+}
+
+	function myFunctionPop(num) {
+	
+	    var popup = document.getElementById("img-pop" + num);
+		popup.classList.toggle("show-pop");
+		
+	}
+	
+
+</script>
+
+
 </html>
