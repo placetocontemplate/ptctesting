@@ -12,6 +12,11 @@ h4 {
 	text-align: center;
 }
 
+
+
+/* -------------- TOP MENU -------------- */
+
+
 #top-menu-hold {
 	background: #fff;
 	position: fixed;
@@ -90,6 +95,9 @@ h4 {
     font-size: 18px !important;
   }
 }
+
+/* -------------- END TOP MENU -------------- */
+
 
 
 

@@ -17,6 +17,10 @@
         font-size: 22px;
         font-family: "SUSE", sans-serif;
     }
+	
+	h1 {
+		margin: 0 auto 30px;
+	}
     
     img {
         width: 100%;
@@ -166,7 +170,7 @@
    
     
     
-    
+/* -------------- MOBILE TWEAKS -------------- */
     
 @media only screen and (max-width:1100px) {
 
@@ -248,15 +252,31 @@
 #rt-item-a {
 	max-width: 400px;
 }
-    
-    
+        
 }
+
+/* -------------- END MOBILE TWEAKS -------------- */
+
     
     
 #footer {
 	background-color: var(--bg);
 	min-height: 300px;
 }
+
+
+/* -------------- SCROLLING BUILDING GRAPHIC -------------- */
+
+.speaker-mask {
+	max-width: 350px;
+	margin: 0 0 16px 0;
+}
+
+.speaker-mask img {
+	width: 100%;
+}
+
+/* -------------- END SCROLLING BUILDING GRAPHIC -------------- */
 
 </style>
 </head>
@@ -289,7 +309,15 @@ assembled from [pieces to inspire]
 
     <div id="lft-item-a"><h1 style="font-size:50px">The Heading</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies sem tortor, sed maximus nulla elementum eget. Vestibulum et massa turpis. Donec non blandit eros. Nullam consectetur lacus aliquet enim congue, vitae vulputate sapien tempus. Nunc volutpat diam vitae mi vulputate egestas. Morbi scelerisque malesuada dui vitae commodo.<br/><br/>Quisque blandit sollicitudin ultricies. Donec mattis massa sit amet massa interdum, ut tincidunt diam ullamcorper. Fusce lacus neque, ornare in sem eu, ornare fringilla lacus. Vivamus ultricies leo dui, et feugiat nisl auctor a. Donec hendrerit maximus ipsum, nec feugiat lectus. Morbi rhoncus lacus vel finibus luctus. Nunc vulputate nibh non ante mattis, eu interdum orci mattis.</div>
     
-    <div id="lft-item-b"><img src="graphics/mush.png" style="width:100%"></div>
+    <div id="lft-item-b">
+	
+	<div class="speaker-mask">
+	<div style="background: url(&quot;graphics/traced-win2.png&quot;) 0px -590.4px;" class="beegee" data-rate="-.4">
+	<img src="graphics/line-speaker-masked.png" width="350" style="display:block">
+	</div>
+	</div>
+	
+	</div>
     
 </div>
     
