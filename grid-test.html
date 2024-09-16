@@ -62,9 +62,29 @@
         border-radius: 50%;
         width: 60%;
         padding: 60% 0 0 0;
-        background: #0000001c;
         margin: 40px auto 20px;
+		position: relative;
+		overflow: hidden;
     }
+	
+	#circ-top {
+		position: absolute;
+		z-index: 4;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: url(graphics/dt-bench2.png) 23px 0;
+		background-size: cover;
+	}
+	
+	#circ-bg {
+		position: absolute;
+		background: #0000001c;
+		z-index: 2;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
     
 #item-a {
     grid-column-start: 1;
@@ -269,7 +289,7 @@
 
 #pod-scl-media {
 	width: 250px;
-	margin: 40px auto 0;
+	margin: 25px auto 0;
 }
 
 #icn-yt {
@@ -456,7 +476,10 @@
     <div id="item-a" class="dk-gr">
     <div id="item-a-hld">
 	<div id="circ-hld">	
-    <div id="circ"></div>  
+    <div id="circ">
+	<div id="circ-top"></div>
+	<div id="circ-bg"></div>
+	</div>  
     Let's go!
 	</div>
 	</div>
@@ -514,7 +537,7 @@ assembled from [pieces to inspire]
 
 <div id="photo-bottom">
 
-<h4>GALLERY</h4>
+<h4>Gallery</h4>
 
 <div class="my-images"></div>
 
