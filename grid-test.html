@@ -193,7 +193,7 @@
     grid-column-start: 2;
     grid-column-end: 3;
     grid-area: maincol;
-	padding: 20px 0 0 0;
+	padding: 0px 0 0 0;
 }
    
     
@@ -238,8 +238,9 @@
 
     
 #item-c img {
-    width:400px;
+    max-width: 400px;
     display: inline-block;
+    width: 100%;
 }
 
 #item-c {
@@ -301,18 +302,18 @@
 
 #icn-yt {
 	background-color: var(--bg);
-	width: 90px;
-	padding: 90px 0 0 0;
-	border-radius: 50%;
 	float: left;
 }
 
 #icn-cloud {
 	background-color: var(--bg);
-	width: 90px;
-	padding: 90px 0 0 0;
-	border-radius: 50%;
 	float: right;
+}
+
+.circ-icn {
+	width: 80px;
+	padding: 80px 0 0 0;
+	border-radius: 50%;
 }
 
 
@@ -458,6 +459,97 @@
 /* -------------- END IMAGE GALLERY -------------- */
 
 
+/* -------------- STICKY MENU -------------- */
+
+#top-sticky-nsm {
+		width: 100%;
+		color: #000;
+        background: #fff;
+		position: fixed;
+		top: -95px;
+	    left: 0px;
+		z-index: 500;
+}
+
+
+.showclass {
+  animation-name: showslide;
+  animation-duration: 1100ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-name: showslide;
+  -webkit-animation-duration: 1100ms;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+}
+
+
+@keyframes showslide {
+
+  from {
+	  left:0px; 
+	  top:-95px;
+  }
+  to {
+	  left:0px; 
+	  top:0px;
+  }
+  
+}
+
+@-webkit-keyframes showslide {
+
+  from {
+	  left:0px; 
+	  top:-95px;
+  }
+  to {
+	  left:0px; 
+	  top:0px;
+  }
+  
+}
+
+.awayclass {
+	
+	animation-name: awayslide !important;
+	animation-duration: 200ms !important;
+	animation-fill-mode: forwards !important;
+	animation-iteration-count: 1 !important;
+  -webkit-animation-name: awayslide !important;
+  -webkit-animation-duration: 200ms !important;
+  -webkit-animation-fill-mode: forwards !important;
+  -webkit-animation-iteration-count: 1 !important;
+}
+
+
+@keyframes awayslide {
+
+  from {
+	  left:0px; 
+	  top:0px;
+  }
+  to {
+	  left:0px; 
+	  top:-195px;
+  }
+  
+}
+
+@-webkit-keyframes awayslide {
+
+  from {
+	  left:0px; 
+	  top:0px;
+  }
+  to {
+	  left:0px; 
+	  top:-195px;
+  }
+  
+}
+
+/* -------------- END STICKY MENU -------------- */
 
 
 /* -------------- SCROLLING BUILDING GRAPHIC -------------- */
@@ -475,6 +567,10 @@
 </style>
 </head>
 <body>
+
+<div id="top-sticky-nsm">
+Top menu.
+</div>
 
 <div id="container">
 <div id="edge-top">
@@ -511,8 +607,8 @@ assembled from [pieces to inspire]
 	<p>The podcast is available on the podcast site or on:</p>
 	
 	<div id="pod-scl-media">
-	<div id="icn-yt"></div>
-	<div id="icn-cloud"></div>
+	<div id="icn-yt" class="circ-icn"></div>
+	<div id="icn-cloud" class="circ-icn"></div>
 	</div>
 	
 	</div>
@@ -533,7 +629,7 @@ assembled from [pieces to inspire]
 
     <div id="rt-item-a"><img src="graphics/mush.png" style="width:100%"></div>
     
-    <div id="rt-item-b"><p>I like to write poems. Painting scenes with words helps me understand.</p>
+    <div id="rt-item-b"><p style="margin: 5px 0 0 0">I like to write poems. Painting scenes with words helps me understand.</p>
 
 <p>I make booklets of my poetry. The hand-stapled ‘chapbooks’ are a dive into print design, and a way to engage with the community.</p>
 
@@ -578,6 +674,38 @@ for (var x = 0; x < images.length; x++) {
 		
 	}
 	
+</script>
+
+<script>	
+
+	var topslidemenu = document.getElementById("top-sticky-nsm");
+    var oldScrollY = window.scrollY;
+	var heightpix = 650;
+
+
+window.addEventListener('scroll', function() {
+
+  if (oldScrollY < window.pageYOffset && window.pageYOffset > heightpix) {
+	
+	/* if down */
+
+    topslidemenu.classList.add("showclass");
+	topslidemenu.classList.remove("awayclass");
+	
+
+  } else if (oldScrollY > window.pageYOffset && window.pageYOffset < heightpix) {
+  
+	  /* if up */
+	  
+	  topslidemenu.classList.add("awayclass");
+	  topslidemenu.classList.remove("showclass");
+
+  }
+
+  oldScrollY = window.pageYOffset;
+
+})
+
 </script>
 
 </html>
