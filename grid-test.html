@@ -10,6 +10,7 @@
     
     :root {
     --bg: #8a9d92;
+	--bg-lt: #c6d5cb;
     }
     
     body {
@@ -29,6 +30,7 @@
 		font-size: 36px;
 		margin: 0 auto 43px;
 		text-align: center;
+		color: #000;
 	}
     
 
@@ -291,7 +293,7 @@
 
 
 #photo-bottom {
-	background-color: var(--bg);
+	background-color: var(--bg-lt);
 	padding: 30px 0 30px 0;
 }    
 
@@ -308,6 +310,10 @@
 #icn-cloud {
 	background-color: var(--bg);
 	float: right;
+}
+
+#icn-yt:hover, #icn-cloud:hover {
+	background-color: var(--bg-lt);
 }
 
 .circ-icn {
@@ -707,8 +713,8 @@ assembled from [pieces to inspire]
 	<p>The podcast is available on the podcast site or on:</p>
 	
 	<div id="pod-scl-media">
-	<div id="icn-yt" class="circ-icn"></div>
-	<div id="icn-cloud" class="circ-icn"></div>
+	<a id="icn-yt" class="circ-icn" href="#"></a>
+	<a id="icn-cloud" class="circ-icn" href="#"></a>
 	</div>
 	
 	</div>
