@@ -11,6 +11,7 @@
     :root {
     --bg: #8a9d92;
 	--bg-lt: #c6d5cb;
+	--menu-fnt: #8a9d92;
     }
     
     body {
@@ -650,12 +651,12 @@
 }
 
 #menu-ul li a:link, a:hover, a:active, a:visited {
-	color: #404040;
+	color: var(--menu-fnt);
 	text-decoration: none;
 }
 
 .active-li {
-	border-bottom: 4px solid #404040 !important;
+	border-bottom: 4px solid var(--menu-fnt) !important;
 }
 
 @keyframes swipe-n {
@@ -714,7 +715,7 @@
 	<li><a href=#">Section</a></li>
 	<li><a href=#">Again</a></li>
 	<li><a href=#">Reallygreat</a></li>
-	<li><a href=#">Section</a></li>
+	<li class="active-li"><a href=#">Section</a></li>
 	</ul>
 </div>
 </div>
