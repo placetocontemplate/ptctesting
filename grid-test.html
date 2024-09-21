@@ -33,6 +33,11 @@
 		text-align: center;
 		color: #000;
 	}
+	
+	.logo-h2 {
+		line-height: 20px;
+		margin: 0 0 23px 0;
+	}
     
 
 #container {
@@ -325,6 +330,18 @@
 
 #icn-yt:hover, #icn-cloud:hover {
 	background-color: var(--bg-lt);
+	animation: circFade 200ms ease-in-out;
+	-webkit-animation: circFade 200ms ease-in-out;
+}
+
+@keyframes circFade {
+  0%   { background-color: var(--bg); }
+  100% { background-color: var(--bg-lt); }
+}
+
+@-webkit-keyframes circFade {
+  0%   { background-color: var(--bg); }
+  100% { background-color: var(--bg-lt); }
 }
 
 .circ-icn {
@@ -749,9 +766,9 @@
 	<div class="lft-col-bgimg"></div>
 	</div>
     
-    <div id="item-b">Place to Contemplate<br/>
-is my <a href="new menu.html">creative space</a>...<br/>
-assembled from [pieces] to [inspire]<br/><br/>
+    <div id="item-b"><h2 class="logo-h2">Place to Contemplate</h2>
+is my <a href="new menu.html">creative space</a>...
+<p style="margin: 17px 0 0 0">assembled from [pieces] to [inspire]</p>
 
 </div>
     
