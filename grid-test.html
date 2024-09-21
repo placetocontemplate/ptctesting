@@ -811,6 +811,24 @@ assembled from [pieces] to [inspire]<br/><br/>
 
 <script>
 
+	window.addEventListener('scroll', function(e) {
+
+		const target = document.querySelectorAll('.beegee');
+		
+		var index = 0, length = target.length;
+			for(index; index < length; index++) {
+			
+			var bgpos = window.pageYOffset * target[index].dataset.rate;
+			target[index].style.backgroundPosition = '0px ' + bgpos + 'px';
+		
+		}
+		
+	});
+
+</script>
+
+<script>
+
 var images = ["graphics/gallery/img-gal4.png", "graphics/gallery/img-gal6.png", "graphics/gallery/img-gal5.png"];
 
             
