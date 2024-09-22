@@ -22,6 +22,11 @@
 		line-height: 36px;
     }
 	
+	html {
+		scroll-behavior: smooth;
+	}
+
+	
 	h1 {
 		margin: 0 auto 30px;
 	}
@@ -37,6 +42,18 @@
 	.logo-h2 {
 		line-height: 39px;
 		margin: 0 0 15px 0;
+	}
+	
+	.jump-link-head {
+		height: 1px;
+		display: block;
+	}
+	
+	.jump-link {
+		height: 40px;
+		display: block;
+		border: 0px solid red;
+		width: 100%;
 	}
     
 
@@ -159,7 +176,7 @@
     align-items: top;
     justify-items: center;
     color: #000;
-    padding: 65px 20px 60px;
+    padding: 25px 20px 60px;
     gap: 0px;
     grid-template-areas: "leftcol maincol";
 }   
@@ -187,7 +204,7 @@
     align-items: top;
     justify-items: center;
     color: #000;
-    padding: 45px 20px 60px;
+    padding: 0px 20px 60px;
     gap: 0px;
     grid-template-areas: "leftcol maincol";
 }
@@ -259,7 +276,7 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-content: space-evenly;
-    padding: 35px 20px 60px;
+    padding: 0px 20px 60px;
     align-items: baseline;
     row-gap: 20px;
     grid-template-areas: "maincol"
@@ -275,7 +292,7 @@
     grid-template-columns: 1fr;
     justify-content: space-evenly;
     align-items: baseline;
-    padding: 45px 20px 60px;
+    padding: 0px 20px 60px;
     row-gap: 20px;
     grid-template-areas: "leftcol" 
 	"maincol";
@@ -313,7 +330,7 @@
 
 #photo-bottom {
 	background-color: var(--bg-lt);
-	padding: 30px 0 30px 0;
+	padding: 0px 0 30px 0;
 }    
 
 #pod-scl-media {
@@ -742,6 +759,9 @@
 <div id="top-static-logo">
 <img src="graphics/ptc-logo-cliffs3.png">
 </div>
+
+<a name="box1" class="jump-link-head"></a>
+
 <div id="top-static-menu">
 	<ul id="menu-ul">
 	<li><a href="#box1">Home</a></li>
@@ -780,10 +800,10 @@
     <div id="item-c"><img src="graphics/mush.png" width="220"></div>
 
 </div>
-    
+<a name="box2" class="jump-link"></a>    
 <div id="lft-container">
-
-    <div id="lft-item-a"><h1 style="font-size:50px">The Heading</h1>
+    <div id="lft-item-a">
+	<h1 style="font-size:50px">The Heading</h1>
 	
 	<p>Place to Contemplate is a nascent podcast. I started it during the pandemic to tease out thoughts. By the third episode, it became a variety show with different segments (comedic, musical, etc).</p>
 
@@ -797,7 +817,6 @@
 	</div>
 	
     <div id="lft-item-b">
-	
 	<div class="speaker-mask">
 	<div style="background: url(&quot;graphics/traced-win2.png&quot;) 0px -590.4px;" class="beegee" data-rate="-.4">
 	<img src="graphics/line-speaker-masked.png" width="350" style="display:block">
@@ -807,10 +826,9 @@
 	</div>
     
 </div>
-    
-<div id="rt-container" style="background:#f1f5f7">
-
-    <div id="rt-item-a"><img src="graphics/poetry-header5.png" style="width:100%; margin: 13px 0 0 0;"></div>
+<div style="background:#f1f5f7"><a name="box3" class="jump-link"></a>
+<div id="rt-container">
+    <div id="rt-item-a"><img src="graphics/poetry-header5.png" style="width:100%; margin: 10px 0 0 0;"></div>
     
     <div id="rt-item-b"><p style="margin: 5px 0 0 0">I like to write poems. Painting scenes with words helps me understand.</p>
 
@@ -819,9 +837,9 @@
 <p style="margin-bottom: 0px;">My most recent publication is ‘Floating Text’, a long-form poem about creativity.</p></div>
     
 </div>
-
+</div>
 <div id="photo-bottom">
-
+<a name="box4" class="jump-link"></a>
 <h4>Gallery</h4>
 
 <div class="my-images"></div>
@@ -881,7 +899,7 @@ for (var x = 0; x < images.length; x++) {
 
 	var topslidemenu = document.getElementById("top-sticky-nsm");
     var oldScrollY = window.scrollY;
-	var heightpix = 650;
+	var heightpix = 390;
 
 
 window.addEventListener('scroll', function() {
