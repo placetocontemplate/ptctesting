@@ -57,7 +57,7 @@
 	}
     
 
-#container {
+.container {
 	margin: 0;
     display: grid;
     grid-template-columns: 20% 30% 480px;
@@ -169,7 +169,7 @@
     
     
     
-#lft-container {
+.lft-container {
     display: grid;
     grid-template-columns: 50% 400px;
     justify-content: space-around;
@@ -197,7 +197,7 @@
 
 
 
-#rt-container {
+.rt-container {
     display: grid;
     grid-template-columns: 400px 50%;
     justify-content: space-evenly;
@@ -242,7 +242,7 @@
         margin: 20px auto 20px !important;
     }
         
-#container {
+.container {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: space-evenly;
@@ -272,7 +272,7 @@
 }
 
     
-#lft-container {
+.lft-container {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: space-evenly;
@@ -287,7 +287,7 @@
 	max-width: 400px;
 }
 
-#rt-container {
+.rt-container {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: space-evenly;
@@ -328,7 +328,7 @@
 }
 
 
-#photo-bottom {
+.photo-bottom {
 	background-color: var(--bg-lt);
 	padding: 0px 0 30px 0;
 }    
@@ -747,10 +747,10 @@
 <div id="top-sticky-nsm">
 <div id="top-menu">
 	<ul id="menu-ul">
-	<li><a href="#box1">Home</a></li>
-	<li><a href="#box2">Podcast</a></li>
-	<li class="active-li"><a href="#box3">Books</a></li>
-	<li><a href="#box4">Gallery</a></li>
+	<li id="test1b" class=""><a href="#box1">Home</a></li>
+	<li id="test2b" class=""><a href="#box2">Podcast</a></li>
+	<li id="test3b" class=""><a href="#box3">Books</a></li>
+	<li id="test4b" class="lastli"><a href="#box4">Gallery</a></li>
 	</ul>
 </div>
 </div>
@@ -766,13 +766,13 @@
 	<ul id="menu-ul">
 	<li><a href="#box1">Home</a></li>
 	<li><a href="#box2">Podcast</a></li>
-	<li class="active-li"><a href="#box3">Books</a></li>
+	<li><a href="#box3">Books</a></li>
 	<li><a href="#box4">Gallery</a></li>
 	</ul>
 </div>
 </div>
 
-<div id="container">
+<div id="test1" class="container">
 <div id="edge-top">
 </div>
     <div id="item-a" class="dk-gr">
@@ -801,7 +801,7 @@
 
 </div>
 <a name="box2" class="jump-link"></a>    
-<div id="lft-container">
+<div id="test2" class="lft-container">
     <div id="lft-item-a">
 	<h1 style="font-size:50px">The Heading</h1>
 	
@@ -827,7 +827,7 @@
     
 </div>
 <div style="background:#f1f5f7"><a name="box3" class="jump-link"></a>
-<div id="rt-container">
+<div id="test3" class="rt-container">
     <div id="rt-item-a"><img src="graphics/poetry-header5.png" style="width:100%; margin: 10px 0 0 0;"></div>
     
     <div id="rt-item-b"><p style="margin: 5px 0 0 0">I like to write poems. Painting scenes with words helps me understand.</p>
@@ -838,8 +838,8 @@
     
 </div>
 </div>
-<div id="photo-bottom">
-<a name="box4" class="jump-link"></a>
+<div id="test4" class="photo-bottom lastsec">
+<a name="box4" class="jump-link" style="height:25px"></a>
 <h4>Gallery</h4>
 
 <div class="my-images"></div>
@@ -893,6 +893,75 @@ for (var x = 0; x < images.length; x++) {
 		
 	}
 	
+</script>
+
+<script>	
+
+    var stickymenu = document.getElementById('menu-ul');
+	
+    var stickyheight = document.getElementById('top-sticky-nsm').offsetHeight + 30;
+
+	var numofclasses = stickymenu.getElementsByTagName('li').length;
+	
+	var lastsec = document.querySelector('.lastsec');
+	var lastli = document.querySelector('.lastli');
+		    
+	
+window.addEventListener('scroll', function() {
+
+    
+    for (var i = 1; i <= numofclasses; i++) {
+
+	var newval = document.getElementById('test' + i);
+	
+	var newval2 = 'test' + i + 'b';
+	
+	var topli = document.getElementById(newval2);
+	
+		
+       
+   if (newval.offsetTop - window.pageYOffset <= stickyheight) {
+   
+   
+   	/* start removal loop */
+	
+	for (var x = 1; x <= numofclasses; x++) {
+       
+	var topmenu = document.getElementById('test' + x + 'b');
+	   
+    topmenu.classList.remove("active-li");	
+
+	}
+		
+    /* end removal loop */
+	
+   
+       topli.classList.add("active-li");
+   
+   
+   } else {
+	 topli.classList.remove("active-li");
+   }
+   
+   
+   
+   	var ht = window.innerHeight;   
+	
+	if (lastsec.offsetTop - window.pageYOffset < ht / 2 ) {
+	
+			topli.classList.remove("active-li");
+			
+	        lastli.classList.add("active-li");		   
+   
+   } else {
+	 lastli.classList.remove("active-li");
+   }
+   
+        
+}
+
+})
+
 </script>
 
 <script>	
