@@ -340,7 +340,7 @@
 
 .photo-bottom {
 	background-color: var(--bg-lt);
-	padding: 0px 0 30px 0;
+	padding: 0px 0 80px 0;
 }    
 
 #pod-scl-media {
@@ -909,7 +909,7 @@ for (var x = 0; x < images.length; x++) {
 
     var stickymenu = document.getElementById('menu-ul');
 	
-    var stickyheight = document.getElementById('top-sticky-nsm').offsetHeight + 30;
+    var stickyheight = document.getElementById('top-sticky-nsm').offsetHeight + 60;
 
 	var numofclasses = stickymenu.getElementsByTagName('li').length;
 	
@@ -971,7 +971,7 @@ window.addEventListener('scroll', function() {
    
    	/* for last sec */
 	
-	if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 10) {
+	if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight + 20) {
 		
 		topli.classList.remove("active-li");
 			
