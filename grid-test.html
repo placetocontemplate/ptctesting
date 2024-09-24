@@ -952,7 +952,7 @@ window.addEventListener('scroll', function() {
 	 topli.classList.remove("active-li");
    }
    
-   
+   /*
    
    	var ht = window.innerHeight;   
 	
@@ -966,10 +966,12 @@ window.addEventListener('scroll', function() {
 	 lastli.classList.remove("active-li");
    }
    
+   */
+   
    
    	/* for last sec */
-	/*
-	if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+	
+	if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 10) {
 		
 		topli.classList.remove("active-li");
 			
@@ -978,6 +980,7 @@ window.addEventListener('scroll', function() {
    } else {
 	 lastli.classList.remove("active-li");
    }
+   
    /* end for last sec */
    
         
