@@ -282,7 +282,7 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-content: space-evenly;
-    padding: 0px 20px 60px;
+    padding: 0px 20px 0px;
     align-items: baseline;
     row-gap: 20px;
     grid-template-areas: "maincol"
@@ -310,7 +310,7 @@
 
 .speaker-mask {
   max-width: 350px;
-  margin: 0 0 16px 0;
+  margin: 0 0 16px 0 !important;
 }
 
 #item-a-hld {
@@ -741,7 +741,7 @@
 /* -------------- SCROLLING BUILDING GRAPHIC -------------- */
 
 .speaker-mask {
-	margin: 0 0 16px 0;
+	margin: 0 0 0px 0;
 }
 
 .speaker-mask img {
@@ -836,8 +836,8 @@
 	</div>
     
 </div>
-<a name="box3" class="jump-link" style="height:60px;border:1px solid red;"></a>
-<div style="background:#f1f5f7">
+<a name="box3" class="jump-link" style="height:80px;border:0px solid red;"></a>
+<div style="background:#f1f5f7;padding: 35px 0 0 0;">
 <div id="test3" class="rt-container">
     <div id="rt-item-a"><img src="graphics/poetry-header5.png" style="width:100%; margin: 10px 0 0 0;"></div>
     
@@ -973,7 +973,7 @@ window.addEventListener('scroll', function() {
    
    	/* for last sec */
 	
-	if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 5) {
+	if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 15) {
 		
 		topli.classList.remove("active-li");
 			
