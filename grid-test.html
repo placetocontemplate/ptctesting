@@ -242,7 +242,7 @@
     }
 	
 	#circ-hld {
-		width: 250px !important;
+		width: 220px !important;
         margin: 20px auto 20px !important;
     }
         
@@ -267,14 +267,14 @@
 
     
 #item-c img {
-    max-width: 400px;
+    max-width: 420px;
     width: 100%;
 	display: block;
 	margin: auto;
 }
 
 #item-c {
-	padding: 30px 0px 0 0;
+	padding: 40px 0px 0 0;
 }
 
     
@@ -836,7 +836,7 @@
 	</div>
     
 </div>
-<div style="background:#f1f5f7"><a name="box3" class="jump-link"></a>
+<div style="background:#f1f5f7"><a name="box3" class="jump-link" style="height:60px;"></a>
 <div id="test3" class="rt-container">
     <div id="rt-item-a"><img src="graphics/poetry-header5.png" style="width:100%; margin: 10px 0 0 0;"></div>
     
@@ -848,6 +848,7 @@
     
 </div>
 </div>
+
 <div id="test4" class="photo-bottom lastsec">
 <a name="box4" class="jump-link" style="height:25px"></a>
 <h4>Gallery</h4>
@@ -909,7 +910,7 @@ for (var x = 0; x < images.length; x++) {
 
     var stickymenu = document.getElementById('menu-ul');
 	
-    var stickyheight = document.getElementById('top-sticky-nsm').offsetHeight + 60;
+    var stickyheight = document.getElementById('top-sticky-nsm').offsetHeight + 260;
 
 	var numofclasses = stickymenu.getElementsByTagName('li').length;
 	
@@ -971,7 +972,7 @@ window.addEventListener('scroll', function() {
    
    	/* for last sec */
 	
-	if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight + 20) {
+	if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 5) {
 		
 		topli.classList.remove("active-li");
 			
