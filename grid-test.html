@@ -26,6 +26,19 @@
 		scroll-behavior: smooth;
 	}
 
+	a:link {
+		color: var(--menu-fnt);
+	}
+	a:active {
+		color: var(--menu-fnt);
+	}
+	a:hover {
+		color: purple !important;
+		text-decoration: none;
+	}
+	a:visited {
+		color: var(--menu-fnt);
+	}
 	
 	h1 {
 		margin: 0 auto 30px;
@@ -336,6 +349,13 @@
 #top-static-logo img {
 	width: 100%;
 	display: block;
+}
+
+#blurb-graphic {
+	max-width: 450px;
+	height: 150px;
+	background: silver;
+	margin: 35px auto 0 auto;
 }
 
 
@@ -704,10 +724,26 @@
 	-webkit-animation-fill-mode: forwards;
 }
 
-#menu-ul li a:link, a:hover, a:active, a:visited {
+#menu-ul a:link {
 	color: var(--menu-fnt);
 	text-decoration: none;
 }
+
+#menu-ul a:hover {
+	color: var(--menu-fnt);
+	text-decoration: none;
+}
+
+#menu-ul a:active {
+	color: var(--menu-fnt);
+	text-decoration: none;
+}
+
+#menu-ul a:visited {
+	color: var(--menu-fnt) !important;
+	text-decoration: none;
+}
+
 
 .active-li {
 	border-bottom: 4px solid var(--bg) !important;
@@ -804,7 +840,7 @@
 
 	<h2 class="logo-h2">Place to Contemplate</h2>
 	is my <a href="new menu.html">creative space</a>&nbsp;…
-	<p style="margin: 17px 0 0 0">assembled from [pieces] to [inspire]</p>
+	<div id="blurb-graphic"></div>
 
 	</div>
     
