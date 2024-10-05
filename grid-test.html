@@ -385,29 +385,28 @@
 }
 
 #icn-yt {
-	background-color: var(--bg);
+	background-color: #ea5858;
 	float: left;
 }
 
 #icn-cloud {
-	background-color: var(--bg);
+	background-color: #ff9b6a;
 	float: right;
 }
 
 #icn-yt:hover, #icn-cloud:hover {
-	background-color: black /*var(--bg-lt)*/;
-	animation: circFade 200ms ease-in-out;
-	-webkit-animation: circFade 200ms ease-in-out;
+	animation: circFade 300ms forwards;
+	-webkit-animation: circFade 300ms forwards;
 }
 
 @keyframes circFade {
-  0%   { background-color: var(--bg); }
-  100% { background-color: var(--bg-lt); }
+
+  100% { background-color: black; }
 }
 
 @-webkit-keyframes circFade {
-  0%   { background-color: var(--bg); }
-  100% { background-color: var(--bg-lt); }
+
+  100% { background-color: black; }
 }
 
 .circ-icn {
@@ -745,7 +744,7 @@
 }
 
 #menu-ul a:hover {
-	color: var(--menu-fnt);
+	color: var(--menu-fnt) !important;
 	text-decoration: none;
 }
 
@@ -755,7 +754,7 @@
 }
 
 #menu-ul a:visited {
-	color: var(--menu-fnt) !important;
+	color: var(--menu-fnt);
 	text-decoration: none;
 }
 
