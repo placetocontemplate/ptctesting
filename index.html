@@ -1,51 +1,42 @@
-<html>
-<title>
-Folder Navigation
-</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Place to Contemplate</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
 <style>
 
 body {
-	background: #aaa690;
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
-#tableIndex {
-	max-width: 800px;
+#container {
 	width: 100%;
-	margin: auto;
+	height: 100vh;
+	background: #fff;
+	display: grid;
+	justify-items: center;
+	align-content: center;
 }
 
-#tableIndex td {
-	padding: 8px;
-	background: silver;
-	border: 5px solid transparent;
+#logo {
+	width: 213px;
+	border-radius: 0%;
+	margin: 0 0 50px 0;
+	
 }
+
 </style>
+</head>
 <body>
-<br/>
-<table border="0" id="tableIndex">
 
-</table>
+<div id="container">
+
+<div id="logo"><img src="graphics/ptc-logo-cliffs3.png"></div>
+
+</div>
 
 </body>
-
-
 </html>
-<script>
-const urls = ["bluescaling.html","simplified-plus-anim2.html","two-srchboxes-trans-end2.html","simplecart.html","piecestoinspire.html"];
-
-const descs = ["A modern, scalable, front-end using CSS grid, CSS animations, and Javascript",
-"Test of animated search",
-"Animated search boxes",
-"A small front-end shopping cart for Paypal, calculates book quantity and shipping type in-browser, and checks out with a standard Paypal button",
-"Earlier incarnation of PTC"];
-
-urls.forEach((element, index) => {
-
-const element2 = descs[index];
-
-document.getElementById('tableIndex').innerHTML += '<tr><td><a href="' + element + '">' + element + '</a></td><td>' + element2 + '</td></tr>';
-
-});
-
-
-</script>
